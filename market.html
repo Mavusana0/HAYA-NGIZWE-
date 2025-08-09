@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haya Ngizwe Market</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function filterCategory(category) {
+      const cards = document.querySelectorAll(".vendor-card");
+      cards.forEach(card => {
+        if (category === 'All' || card.dataset.category === category) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-yellow-400">Haya Ngizwe Market</h1>
+      <nav>
+        <a href="index.html" class="mx-2 text-white hover:text-yellow-300">Home</a>
+        <a href="market.html" class="mx-2 text-yellow-400">Market</a>
+        <!-- Add other links here -->
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-10">
+    <div class="mb-6 flex flex-wrap gap-2 justify-start items-center">
+      <button onclick="filterCategory('All')" class="px-4 py-2 bg-yellow-400 text-black rounded">All</button>
+      <button onclick="filterCategory('Books')" class="px-4 py-2 bg-gray-800 hover:bg-yellow-400 rounded">Books</button>
+      <button onclick="filterCategory('Art')" class="px-4 py-2 bg-gray-800 hover:bg-yellow-400 rounded">Art</button>
+      <button onclick="filterCategory('Clothing')" class="px-4 py-2 bg-gray-800 hover:bg-yellow-400 rounded">Clothing</button>
+      <button onclick="filterCategory('Food')" class="px-4 py-2 bg-gray-800 hover:bg-yellow-400 rounded">Food</button>
+      <button onclick="filterCategory('Tickets')" class="ml-auto px-4 py-2 bg-yellow-500 text-black font-semibold rounded">Sell Tickets 🎟️</button>
+    </div>
+
+    <!-- Sample Vendor Cards -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="vendor-card" data-category="Books">
+        <div class="bg-white text-black p-4 rounded shadow">
+          <h2 class="text-lg font-semibold">Book Vendor</h2>
+          <p>Bookstore selling poetry and African literature.</p>
+        </div>
+      </div>
+      <div class="vendor-card" data-category="Art">
+        <div class="bg-white text-black p-4 rounded shadow">
+          <h2 class="text-lg font-semibold">Artisan Crafts</h2>
+          <p>Handmade local artwork and sculptures.</p>
+        </div>
+      </div>
+      <div class="vendor-card" data-category="Clothing">
+        <div class="bg-white text-black p-4 rounded shadow">
+          <h2 class="text-lg font-semibold">Cultural Clothing</h2>
+          <p>Authentic traditional attire and designs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor Registration Form -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-bold text-yellow-400 mb-4">Vendor Registration</h2>
+      <form action="YOUR_SCRIPT_URL" method="POST" enctype="multipart/form-data" class="grid gap-4 bg-gray-800 p-6 rounded">
+        <input name="vendorName" placeholder="Vendor Name" class="p-2 rounded" required>
+        <input name="category" placeholder="Category (e.g. Art, Books)" class="p-2 rounded" required>
+        <input name="location" placeholder="Location" class="p-2 rounded" required>
+        <input name="email" type="email" placeholder="Email" class="p-2 rounded" required>
+        <input name="image" type="file" accept="image/*" class="p-2 rounded">
+        <button type="submit" class="bg-yellow-500 text-black p-2 rounded font-semibold">Submit</button>
+      </form>
+    </section>
+
+    <!-- Ticket Seller Section -->
+    <section id="ticket-seller" class="mt-16">
+      <h2 class="text-2xl font-bold text-yellow-400 mb-2">Sell Tickets</h2>
+      <p class="mb-4 text-sm text-gray-300">Please read and agree to the terms before submitting your event ticket.</p>
+      <div class="bg-gray-700 p-4 rounded mb-4">
+        <h3 class="font-semibold">Terms & Conditions</h3>
+        <ul class="list-disc list-inside text-sm">
+          <li>Only official event organizers may register.</li>
+          <li>Tickets must be legitimate and verified.</li>
+          <li>Uploaded ticket posters/images must not contain inappropriate content.</li>
+        </ul>
+      </div>
+      <form action="YOUR_SCRIPT_URL" method="POST" enctype="multipart/form-data" class="grid gap-4 bg-gray-800 p-6 rounded">
+        <input name="organizerName" placeholder="Organizer Name" class="p-2 rounded" required>
+        <input name="eventName" placeholder="Event Name" class="p-2 rounded" required>
+        <input name="date" type="date" class="p-2 rounded" required>
+        <input name="email" type="email" placeholder="Email" class="p-2 rounded" required>
+        <input name="poster" type="file" accept="image/*" class="p-2 rounded">
+        <button type="submit" class="bg-yellow-500 text-black p-2 rounded font-semibold">Register Ticket Sale</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="bg-black text-center text-yellow-400 py-6 mt-10">
+    <p>&copy; 2025 Haya Ngizwe Events. All rights reserved.</p>
+  </footer>
+</body>
+</html>

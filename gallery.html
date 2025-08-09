@@ -1,0 +1,85 @@
+<!-- gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Haya Ngizwe Events</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff;
+    }
+
+    header {
+      background-color: #8e0000;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Gallery</h1>
+    <p>Memories Captured from Our Events</p>
+  </header>
+
+  <div class="container">
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/event1.jpg" alt="Poetry Slam 2024">
+      </div>
+      <div class="gallery-item">
+        <img src="images/event2.jpg" alt="Sound Setup Showcase">
+      </div>
+      <div class="gallery-item">
+        <img src="images/event3.jpg" alt="Artist Performance">
+      </div>
+      <div class="gallery-item">
+        <img src="images/event4.jpg" alt="Behind the Scenes">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

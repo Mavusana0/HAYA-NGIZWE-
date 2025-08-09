@@ -1,0 +1,138 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Haya Ngizwe Events</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe6e6, #fff);
+    }
+
+    header {
+      background-color: #8e0000;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: url('banner.jpg') no-repeat center center/cover;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+    }
+
+    .buttons a {
+      display: inline-block;
+      background-color: #ff4e4e;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #a10000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #8e0000;
+      color: white;
+    }
+
+    @keyframes fadeInDown {
+      0% { transform: translateY(-40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      nav a { display: block; margin: 10px 0; }
+      .buttons a { display: block; margin: 10px auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="HAYA NGIZWE" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="market.html">market</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Haya Ngizwe Events</h1>
+    <p>Where creativity meets professionalism. We bring art, poetry, and production to life since 2020.</p>
+    <div class="buttons">
+      <a href="poetry-registration.html">Register for Poetry Slam</a>
+      <a href="services.html">Our Services</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Haya Ngizwe Events · Founded by Bhekumuzi Mahomane<br>
+    Instagram: @HAYA NGIZWE EVENTS · Facebook & Twitter: @HAYA NGIZWE
+  </footer>
+
+</body>
+</html>
+

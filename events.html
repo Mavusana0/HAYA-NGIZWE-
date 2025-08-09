@@ -1,0 +1,106 @@
+<!-- events.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events | Haya Ngizwe Events</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #8e0000;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .event {
+      background-color: #fff;
+      border-left: 5px solid #8e0000;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .event h2 {
+      margin-top: 0;
+    }
+
+    .event p {
+      margin: 0.3rem 0;
+    }
+
+    .status {
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      background-color: #ffd1d1;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .confirmed {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .unconfirmed {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Upcoming Events</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="event">
+      <h2>Gala Dinner with HN Mavusana</h2>
+      <p><strong>Date:</strong> 01 August 2025</p>
+      <p><strong>Time:</strong> 18:00</p>
+      <p><strong>Venue:</strong> Midrand</p>
+      <p class="status confirmed">Confirmed</p>
+    </div>
+
+    <div class="event">
+      <h2>Celebrating Stories of She</h2>
+      <p><strong>Date:</strong> 02 August 2025</p>
+      <p><strong>Location:</strong> Pretoria</p>
+      <p class="status unconfirmed">Not Yet Confirmed</p>
+    </div>
+
+    <div class="event">
+      <h2>Poetry Slam Finals</h2>
+      <p><strong>Date:</strong> 15 June 2026</p>
+      <p><strong>Location:</strong> Johannesburg</p>
+      <p class="status confirmed">Confirmed</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

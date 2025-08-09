@@ -1,0 +1,118 @@
+<!-- admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | Haya Ngizwe Events</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    header {
+      background-color: #8e0000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 1.5rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #8e0000;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .card p {
+      margin: 0.5rem 0;
+    }
+
+    .respond {
+      margin-top: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #8e0000;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #6e0000;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Haya Ngizwe Events – Admin Dashboard</h1>
+  </header>
+
+  <div class="container">
+    <h2>Latest Form Submissions</h2>
+
+    <div class="card">
+      <p><strong>Name:</strong> Lindiwe Mokoena</p>
+      <p><strong>Email:</strong> lindiwe@example.com</p>
+      <p><strong>Location:</strong> Tembisa</p>
+      <p><strong>Message:</strong> I want to register for the poetry slam!</p>
+
+      <div class="respond">
+        <label for="reply1">Reply:</label>
+        <textarea id="reply1" rows="3" placeholder="Type your response..."></textarea>
+        <button onclick="alert('Response sent to Lindiwe!')">Send Response</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p><strong>Name:</strong> Sibusiso Dlamini</p>
+      <p><strong>Email:</strong> sbu@example.com</p>
+      <p><strong>Location:</strong> Midrand</p>
+      <p><strong>Message:</strong> When is the next event?</p>
+
+      <div class="respond">
+        <label for="reply2">Reply:</label>
+        <textarea id="reply2" rows="3" placeholder="Type your response..."></textarea>
+        <button onclick="alert('Response sent to Sibusiso!')">Send Response</button>
+      </div>
+    </div>
+
+    <!-- More submissions can be dynamically added here -->
+
+  </div>
+
+</body>
+</html>

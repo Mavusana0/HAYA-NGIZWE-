@@ -1,0 +1,114 @@
+<!-- admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Haya Ngizwe Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #8e0000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .submission {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .submission p {
+      margin: 0.3rem 0;
+    }
+
+    .reply-form {
+      margin-top: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      padding: 0.6rem 1.5rem;
+      background-color: #8e0000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a00000;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <p>Welcome, manage your submissions here</p>
+  </header>
+
+  <div class="container">
+    <h2>All Submissions</h2>
+
+    <!-- Example Submission -->
+    <div class="submission">
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> john@example.com</p>
+      <p><strong>Message:</strong> I'm excited to join the Poetry Slam!</p>
+
+      <form class="reply-form">
+        <label for="reply">Reply to John:</label>
+        <textarea rows="3" placeholder="Type your reply here..."></textarea>
+        <button type="button" onclick="alert('Reply sent!')">Send Reply</button>
+      </form>
+    </div>
+
+    <!-- Another Example Submission -->
+    <div class="submission">
+      <p><strong>Name:</strong> Thando Mokoena</p>
+      <p><strong>Email:</strong> thando@example.com</p>
+      <p><strong>Message:</strong> Great event! I’ll share with friends.</p>
+
+      <form class="reply-form">
+        <label for="reply">Reply to Thando:</label>
+        <textarea rows="3" placeholder="Type your reply here..."></textarea>
+        <button type="button" onclick="alert('Reply sent!')">Send Reply</button>
+      </form>
+    </div>
+
+    <!-- Add dynamic loading from script or database here -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Haya Ngizwe Events</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+
+    header {
+      background-color: #8e0000;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #8e0000;
+      text-align: center;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #8e0000;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #6e0000;
+    }
+
+    .map {
+      margin-top: 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #8e0000;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Haya Ngizwe Events</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form action="#" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="location">Your Location</label>
+      <input type="text" id="location" name="location" placeholder="e.g. Tembisa, Gauteng" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="map">
+      <h3 style="margin-top:2rem;">Our Office</h3>
+      <iframe src="https://www.google.com/maps?q=16+Lerubisi+Street,+Mostu,+Tembisa,+1632&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Haya Ngizwe Events · Located at 16 Lerubisi Street, Mostu, Tembisa 1632 · hayangizwe@gmail.com · 065 916 8844
+  </footer>
+
+</body>
+</html>

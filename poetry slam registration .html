@@ -1,0 +1,147 @@
+<!-- register-poetry.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Poetry Slam 2026</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #8e0000;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin: 0.5rem 0;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    form {
+      background: #f8f8f8;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      background-color: #8e0000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a50000;
+    }
+
+    .countdown {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Register for the Poetry Slam</h1>
+    <p>Compete in June 2026 and make your voice heard!</p>
+  </header>
+
+  <div class="container">
+
+    <div class="countdown" id="countdown">
+      Countdown loading...
+    </div>
+
+    <form id="poetryForm">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="location">Your Location:</label>
+      <input type="text" id="location" name="location" required />
+
+      <label for="bio">Short Artist Bio / Message:</label>
+      <textarea id="bio" name="bio" rows="4"></textarea>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+
+  </div>
+
+  <script>
+    // Countdown to June 1, 2026
+    const countdownEl = document.getElementById("countdown");
+    const targetDate = new Date("June 1, 2026 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        countdownEl.innerHTML = "Registration Closed";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `Event starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+
+    // Form submission via Gmail Apps Script backend
+    document.getElementById("poetryForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(this);
+      fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+        method: "POST",
+        body: data
+      })
+      .then(response => alert("Registration submitted successfully!"))
+      .catch(error => alert("There was a problem submitting your form."));
+    });
+  </script>
+</body>
+</html>
